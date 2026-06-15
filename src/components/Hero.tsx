@@ -93,7 +93,6 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
                 background: "#FF6A00",
                 borderRadius: "50%",
                 display: "inline-block",
-                animation: "pulse 2s infinite",
               }}
             />
             <span style={{ color: "#fff", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.5px", textTransform: "uppercase" }}>
@@ -244,10 +243,6 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
       </div>
 
       <style>{`
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.4; }
-        }
         .hero-btns {
           display: flex;
           flex-direction: row;
