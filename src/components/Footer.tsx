@@ -126,7 +126,7 @@ export default function Footer() {
           }}
         >
           <p style={{ fontSize: "0.8rem", color: "#64748B" }}>© {new Date().getFullYear()} Hyperlink Tech Solutions. All rights reserved.</p>
-          <p style={{ fontSize: "0.8rem", color: "#64748B" }}>Mumbai, Maharashtra, India</p>
+          <p style={{ fontSize: "0.8rem", color: "#64748B" }}>Pune, Maharashtra, India</p>
         </div>
       </div>
     </footer>

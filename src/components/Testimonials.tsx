@@ -70,11 +70,13 @@ export default function Testimonials() {
           >
             What Our Clients Say
           </h2>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginTop: "0.75rem" }}>
-            {[1, 2, 3, 4, 5].map((s) => (
-              <span key={s} style={{ color: "#FF6A00", fontSize: "1.2rem" }}>★</span>
-            ))}
-            <span style={{ color: "#94A3B8", fontSize: "0.9rem", marginLeft: "6px" }}>5.0/5 avg · Trusted by 50+ businesses</span>
+          <div className="testimonial-rating" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginTop: "0.75rem" }}>
+            <div style={{ display: "flex", gap: "2px" }}>
+              {[1, 2, 3, 4, 5].map((s) => (
+                <span key={s} style={{ color: "#FF6A00", fontSize: "1.2rem" }}>★</span>
+              ))}
+            </div>
+            <span style={{ color: "#94A3B8", fontSize: "0.9rem", textAlign: "center" }}>5.0/5 avg · Trusted by 50+ businesses</span>
           </div>
         </div>
 
@@ -135,6 +137,14 @@ export default function Testimonials() {
           ))}
         </div>
       </div>
+      <style>{`
+        @media (max-width: 600px) {
+          .testimonial-rating {
+            flex-direction: column !important;
+            gap: 4px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
