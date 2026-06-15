@@ -62,31 +62,29 @@ export default function Portfolio() {
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
-  // Initial check for bounds on mount
   useEffect(() => {
-    handleScroll();
-  }, []);
-
-  const handleScroll = () => {
     if (!scrollContainerRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
     
-    const atStart = scrollLeft <= 10;
-    const atEnd = scrollLeft >= scrollWidth - clientWidth - 10;
-    
-    setIsAtStart(atStart);
-    setIsAtEnd(atEnd);
-    
-    if (atEnd) {
-      setActiveIndex(PROJECTS.length - 1);
-      return;
-    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = Number(entry.target.getAttribute('data-index'));
+          if (!isNaN(index)) {
+            setActiveIndex(index);
+            setIsAtStart(index === 0);
+            setIsAtEnd(index === PROJECTS.length - 1);
+          }
+        }
+      });
+    }, {
+      root: scrollContainerRef.current,
+      threshold: 0.6
+    });
 
-    const item = scrollContainerRef.current.firstElementChild as HTMLElement;
-    const itemWidth = item ? item.offsetWidth + 24 : (scrollWidth / PROJECTS.length);
-    const newIndex = Math.round(scrollLeft / itemWidth);
-    setActiveIndex(newIndex);
-  };
+    Array.from(scrollContainerRef.current.children).forEach(child => observer.observe(child));
+
+    return () => observer.disconnect();
+  }, []);
 
   const scrollPrev = () => {
     if (!scrollContainerRef.current) return;
@@ -196,7 +194,6 @@ export default function Portfolio() {
 
           <div
             ref={scrollContainerRef}
-            onScroll={handleScroll}
             className="portfolio-scroll hide-scrollbar"
             style={{
               display: "flex",
@@ -209,9 +206,10 @@ export default function Portfolio() {
               padding: "1rem 0",
             }}
           >
-            {PROJECTS.map((p) => (
+            {PROJECTS.map((p, index) => (
               <div
                 key={p.title}
+                data-index={index}
                 style={{
                   flex: "0 0 100%",
                   minWidth: "100%",
