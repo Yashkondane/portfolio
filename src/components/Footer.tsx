@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 const PHONE = "+917823082038";
 const PHONE_DISPLAY = "+91 78230 82038";
@@ -37,9 +38,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
-              <img 
+              <Image 
                 src="/image copy 2.png" 
                 alt="Hyperlink Tech Solutions" 
+                width={300}
+                height={110}
                 style={{ height: "110px", width: "auto", objectFit: "contain", mixBlendMode: "screen", margin: "-15px 0 -15px -10px" }} 
               />
             </Link>
@@ -78,7 +81,7 @@ export default function Footer() {
                 <li key={l.label}>
                   <Link
                     href={l.href}
-                    style={{ fontSize: "0.85rem", color: "#94A3B8", transition: "color 0.2s" }}
+                    style={{ fontSize: "0.85rem", color: "#94A3B8", transition: "color 0.2s", display: "inline-block", padding: "4px 0" }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = "#FF6A00")}
                     onMouseLeave={(e) => (e.currentTarget.style.color = "#94A3B8")}
                   >

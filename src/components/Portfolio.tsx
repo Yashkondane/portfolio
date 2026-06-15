@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 
 const PROJECTS = [
   {
@@ -152,6 +153,7 @@ export default function Portfolio() {
         <div style={{ position: "relative", maxWidth: "800px", margin: "0 auto" }}>
           {/* Left Navigation Arrow */}
           <button
+            aria-label="Previous slide"
             onClick={scrollPrev}
             disabled={isAtStart}
             style={{
@@ -240,12 +242,19 @@ export default function Portfolio() {
                     width: "100%",
                     height: "clamp(260px, 45vw, 420px)",
                     background: "#f0f0f0",
-                    backgroundImage: `url("${p.image}")`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
+                    position: "relative",
                     borderBottom: "1px solid #e8e8e8",
                   }}
-                />
+                >
+                  <Image 
+                    src={p.image} 
+                    alt={p.title} 
+                    fill 
+                    style={{ objectFit: "cover", objectPosition: "center" }} 
+                    sizes="(max-width: 768px) 100vw, 800px" 
+                    quality={75}
+                  />
+                </div>
 
                 {/* Content Section */}
                 <div style={{ padding: "clamp(1.5rem, 4vw, 3rem)", display: "flex", flexDirection: "column", flexGrow: 1 }}>
@@ -292,6 +301,7 @@ export default function Portfolio() {
 
           {/* Right Navigation Arrow */}
           <button
+            aria-label="Next slide"
             onClick={scrollNext}
             disabled={isAtEnd}
             style={{

@@ -48,9 +48,9 @@ export default function ConsultationForm() {
       }}
     >
       <div style={{ marginBottom: "1.25rem" }}>
-        <h3 style={{ fontSize: "1.2rem", fontWeight: 800, color: "#0A0A0A", marginBottom: "4px" }}>
+        <h2 style={{ fontSize: "1.2rem", fontWeight: 800, color: "#0A0A0A", marginBottom: "4px" }}>
           Get a Free Consultation
-        </h3>
+        </h2>
         <p style={{ fontSize: "0.8rem", color: "#666" }}>Fill in your details — we&apos;ll call you back in 5 minutes!</p>
       </div>
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>

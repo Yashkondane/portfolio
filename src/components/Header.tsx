@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const PHONE = "+917823082038";
 const PHONE_DISPLAY = "+91 78230 82038";
@@ -31,9 +32,12 @@ export default function Header() {
       >
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, paddingLeft: "10px", height: "80px", overflow: "hidden" }}>
-          <img 
+          <Image 
             src="/image copy 2.png" 
             alt="Hyperlink Tech Solutions" 
+            width={300}
+            height={110}
+            priority
             style={{ height: "110px", width: "auto", objectFit: "contain", mixBlendMode: "screen" }} 
           />
         </Link>
@@ -126,7 +130,7 @@ export default function Header() {
               key={item}
               href={`#${item.toLowerCase()}`}
               onClick={() => setOpen(false)}
-              style={{ color: "#fff", fontWeight: 500, fontSize: "1rem", padding: "0.5rem 0", borderBottom: "1px solid rgba(255,255,255,0.1)" }}
+              style={{ color: "#fff", fontWeight: 500, fontSize: "1rem", padding: "12px 0", display: "block", borderBottom: "1px solid rgba(255,255,255,0.1)" }}
             >
               {item}
             </Link>
