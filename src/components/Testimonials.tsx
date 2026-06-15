@@ -1,4 +1,3 @@
-"use client";
 
 const REVIEWS = [
   {
@@ -89,20 +88,13 @@ export default function Testimonials() {
           {REVIEWS.map((r) => (
             <div
               key={r.name}
+              className="hover:border-[#FF6A00] hover:-translate-y-[4px]"
               style={{
                 background: "rgba(255,255,255,0.07)",
                 borderRadius: "16px",
                 padding: "1.5rem",
                 border: "1.5px solid rgba(255,255,255,0.1)",
                 transition: "border-color 0.2s, transform 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "#FF6A00";
-                e.currentTarget.style.transform = "translateY(-4px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)";
-                e.currentTarget.style.transform = "translateY(0)";
               }}
             >
               <div style={{ display: "flex", gap: "2px", marginBottom: "0.875rem" }}>

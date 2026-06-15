@@ -1,4 +1,3 @@
-"use client";
 
 const TRUST_ITEMS = [
   {
@@ -54,6 +53,7 @@ export default function TrustBar() {
           {TRUST_ITEMS.map((item) => (
             <div
               key={item.label}
+              className="hover:bg-[rgba(255,106,0,0.1)] hover:border-[rgba(255,106,0,0.3)] hover:-translate-y-[5px]"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -65,16 +65,6 @@ export default function TrustBar() {
                 border: "1px solid rgba(255,255,255,0.08)",
                 transition: "all 0.3s ease",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.1)"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "rgba(255,106,0,0.1)";
-                e.currentTarget.style.borderColor = "rgba(255,106,0,0.3)";
-                e.currentTarget.style.transform = "translateY(-5px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "rgba(255,255,255,0.05)";
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
-                e.currentTarget.style.transform = "translateY(0)";
               }}
             >
               <span

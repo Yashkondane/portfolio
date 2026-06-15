@@ -1,4 +1,3 @@
-"use client";
 
 const PRICING_PLANS = [
   {
@@ -103,6 +102,7 @@ export default function Pricing() {
           {PRICING_PLANS.map((plan, index) => (
             <div
               key={index}
+              className={plan.popular ? "hover:-translate-y-[5px] hover:shadow-[0_25px_50px_rgba(255,106,0,0.2)]" : "hover:-translate-y-[5px] hover:shadow-[0_15px_35px_rgba(0,0,0,0.3)]"}
               style={{
                 background: plan.popular ? "rgba(15, 23, 42, 0.9)" : "rgba(15, 23, 42, 0.6)",
                 backdropFilter: "blur(16px)",
@@ -114,18 +114,6 @@ export default function Pricing() {
                 position: "relative",
                 transition: "transform 0.2s ease, box-shadow 0.2s ease",
                 boxShadow: plan.popular ? "0 20px 40px rgba(0,0,0,0.4)" : "0 10px 30px rgba(0,0,0,0.2)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-5px)";
-                e.currentTarget.style.boxShadow = plan.popular
-                  ? "0 25px 50px rgba(255, 106, 0, 0.2)"
-                  : "0 15px 35px rgba(0, 0, 0, 0.3)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = plan.popular
-                  ? "0 20px 40px rgba(0,0,0,0.4)"
-                  : "0 10px 30px rgba(0,0,0,0.2)";
               }}
             >
               {plan.popular && (
@@ -189,6 +177,7 @@ export default function Pricing() {
                 href="https://wa.me/917823082038?text=Hi!%20I'm%20interested%20in%20the%20website%20development%20plans."
                 target="_blank"
                 rel="noopener noreferrer"
+                className={plan.popular ? "hover:bg-[#E55D00] hover:-translate-y-[2px]" : "hover:bg-[rgba(255,255,255,0.1)] hover:-translate-y-[2px]"}
                 style={{
                   display: "block",
                   width: "100%",
@@ -201,22 +190,6 @@ export default function Pricing() {
                   borderRadius: "8px",
                   border: plan.popular ? "none" : "1px solid rgba(255,255,255,0.1)",
                   transition: "background 0.2s ease, transform 0.1s ease",
-                }}
-                onMouseEnter={(e) => {
-                  if (plan.popular) {
-                    e.currentTarget.style.background = "#E55D00";
-                  } else {
-                    e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-                  }
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  if (plan.popular) {
-                    e.currentTarget.style.background = "#FF6A00";
-                  } else {
-                    e.currentTarget.style.background = "rgba(255,255,255,0.05)";
-                  }
-                  e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
                 Choose {plan.name}

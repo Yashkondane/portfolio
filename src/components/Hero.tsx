@@ -1,4 +1,3 @@
-"use client";
 import ConsultationForm from "./ConsultationForm";
 
 interface HeroProps {
@@ -147,6 +146,7 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
           <div className="hero-btns" style={{ marginBottom: "2.5rem", justifyContent: seoMode ? "center" : "flex-start" }}>
             <a
               href="tel:+917823082038"
+              className="hover:bg-[#E55D00] hover:-translate-y-[2px]"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -160,14 +160,6 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
                 transition: "background 0.2s, transform 0.1s",
                 boxShadow: "0 4px 20px rgba(255,106,0,0.4)",
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#E55D00";
-                e.currentTarget.style.transform = "translateY(-2px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#FF6A00";
-                e.currentTarget.style.transform = "translateY(0)";
-              }}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
@@ -179,6 +171,7 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
               href="https://wa.me/917823082038?text=Hi!%20I%20need%20a%20website%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:bg-[#1ebe5d] hover:-translate-y-[2px]"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -191,14 +184,6 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
                 borderRadius: "8px",
                 transition: "background 0.2s, transform 0.1s",
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#1ebe5d";
-                e.currentTarget.style.transform = "translateY(-2px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#25D366";
-                e.currentTarget.style.transform = "translateY(0)";
-              }}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -210,6 +195,7 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
             {!seoMode && (
               <a
                 href="#pricing"
+                className="hover:border-[#FF6A00] hover:text-[#FF6A00]"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -222,14 +208,6 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
                   borderRadius: "8px",
                   border: "1.5px solid rgba(255,255,255,0.25)",
                   transition: "border-color 0.2s, color 0.2s",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "#FF6A00";
-                  e.currentTarget.style.color = "#FF6A00";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.25)";
-                  e.currentTarget.style.color = "#fff";
                 }}
               >
                 View Pricing →

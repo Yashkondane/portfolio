@@ -1,4 +1,3 @@
-"use client";
 
 export default function FloatingButtons() {
   const PHONE = "+917823082038";
@@ -24,6 +23,7 @@ export default function FloatingButtons() {
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
           title="Chat on WhatsApp"
+          className="hover:scale-[1.12] hover:shadow-[0_6px_28px_rgba(37,211,102,0.7)]"
           style={{
             width: "56px",
             height: "56px",
@@ -35,14 +35,6 @@ export default function FloatingButtons() {
             justifyContent: "center",
             boxShadow: "0 4px 20px rgba(37,211,102,0.5)",
             transition: "transform 0.2s, box-shadow 0.2s",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.12)";
-            e.currentTarget.style.boxShadow = "0 6px 28px rgba(37,211,102,0.7)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-            e.currentTarget.style.boxShadow = "0 4px 20px rgba(37,211,102,0.5)";
           }}
         >
           <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
@@ -56,6 +48,7 @@ export default function FloatingButtons() {
           href={`tel:${PHONE}`}
           aria-label="Call Us"
           title="Call +91 78230 82038"
+          className="hover:scale-[1.12] hover:shadow-[0_6px_28px_rgba(255,106,0,0.7)]"
           style={{
             width: "56px",
             height: "56px",
@@ -67,14 +60,6 @@ export default function FloatingButtons() {
             justifyContent: "center",
             boxShadow: "0 4px 20px rgba(255,106,0,0.5)",
             transition: "transform 0.2s, box-shadow 0.2s",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.12)";
-            e.currentTarget.style.boxShadow = "0 6px 28px rgba(255,106,0,0.7)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-            e.currentTarget.style.boxShadow = "0 4px 20px rgba(255,106,0,0.5)";
           }}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">

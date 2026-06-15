@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -63,7 +62,7 @@ export default function Footer() {
                 </svg>
                 WhatsApp Us
               </a>
-              <a href="mailto:hyperlinktechsolutions@gmail.com" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#94A3B8", fontWeight: 600, fontSize: "0.9rem", transition: "color 0.2s" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")} onMouseLeave={(e) => (e.currentTarget.style.color = "#94A3B8")}>
+              <a href="mailto:hyperlinktechsolutions@gmail.com" className="hover:text-[#fff]" style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "#94A3B8", fontWeight: 600, fontSize: "0.9rem", transition: "color 0.2s" }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
@@ -81,9 +80,8 @@ export default function Footer() {
                 <li key={l.label}>
                   <Link
                     href={l.href}
+                    className="hover:text-[#FF6A00]"
                     style={{ fontSize: "0.85rem", color: "#94A3B8", transition: "color 0.2s", display: "inline-block", padding: "4px 0" }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = "#FF6A00")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "#94A3B8")}
                   >
                     {l.label}
                   </Link>

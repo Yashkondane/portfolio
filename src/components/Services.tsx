@@ -1,4 +1,3 @@
-"use client";
 
 interface Service {
   id: string;
@@ -109,6 +108,7 @@ export default function Services() {
           {SERVICES.map((s) => (
             <div
               key={s.id}
+              className="hover:border-[#1A1A1A] hover:shadow-[0_8px_30px_rgba(26,86,219,0.15)] hover:-translate-y-[4px]"
               style={{
                 background: "#fafafa",
                 borderRadius: "16px",
@@ -118,16 +118,6 @@ export default function Services() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "1rem",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "#1A1A1A";
-                e.currentTarget.style.boxShadow = "0 8px 30px rgba(26,86,219,0.15)";
-                e.currentTarget.style.transform = "translateY(-4px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#e8e8e8";
-                e.currentTarget.style.boxShadow = "none";
-                e.currentTarget.style.transform = "translateY(0)";
               }}
             >
               <div
@@ -163,6 +153,7 @@ export default function Services() {
                   href={`https://wa.me/${WA}?text=Hi!%20I%20need%20${encodeURIComponent(s.title)}%20for%20my%20business.`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover:bg-[#E55D00]"
                   style={{
                     flex: 1,
                     textAlign: "center",
@@ -173,12 +164,6 @@ export default function Services() {
                     padding: "11px 0",
                     borderRadius: "8px",
                     transition: "background 0.2s",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "#E55D00";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "#FF6A00";
                   }}
                 >
                   {s.cta} →
