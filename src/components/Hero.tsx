@@ -146,7 +146,7 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
           <div className="hero-btns" style={{ marginBottom: "2.5rem", justifyContent: seoMode ? "center" : "flex-start" }}>
             <a
               href="tel:+917823082038"
-              className="hover:bg-[#E55D00] hover:-translate-y-[2px]"
+              className="hero-btn-primary hover:bg-[#E55D00] hover:-translate-y-[2px]"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -171,7 +171,7 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
               href="https://wa.me/917823082038?text=Hi!%20I%20need%20a%20website%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:bg-[#1ebe5d] hover:-translate-y-[2px]"
+              className="hero-btn-primary hover:bg-[#1ebe5d] hover:-translate-y-[2px]"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -195,7 +195,7 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
             {!seoMode && (
               <a
                 href="#pricing"
-                className="hover:border-[#FF6A00] hover:text-[#FF6A00]"
+                className="hero-btn-secondary hover:border-[#FF6A00] hover:text-[#FF6A00]"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -216,7 +216,7 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
           </div>
 
           {!seoMode && (
-            <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap", background: "rgba(255, 255, 255, 0.15)", backdropFilter: "blur(12px)", padding: "12px 20px", borderRadius: "14px", border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.1)" }}>
+            <div className="rating-box" style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap", background: "rgba(255, 255, 255, 0.15)", backdropFilter: "blur(12px)", padding: "12px 20px", borderRadius: "14px", border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: "0 8px 32px rgba(0,0,0,0.1)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <div style={{ display: "flex", gap: "2px" }}>
                   {[1,2,3,4,5].map((s) => (
@@ -225,7 +225,7 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
                 </div>
                 <span style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 700 }}>4.8/5 Rating</span>
               </div>
-              <div style={{ color: "rgba(255,255,255,0.3)", fontSize: "1.2rem" }}>|</div>
+              <div className="rating-divider" style={{ color: "rgba(255,255,255,0.3)", fontSize: "1.2rem" }}>|</div>
               <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <span style={{ color: "#fff", fontSize: "0.95rem", fontWeight: 600 }}>
                   <strong style={{ color: "#fff", fontWeight: 900, fontSize: "1.2rem" }}>50+</strong> Websites Delivered
@@ -250,21 +250,34 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
         }
         .hero-btns {
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
+          flex-wrap: wrap;
           gap: 0.875rem;
           width: 100%;
         }
-        .hero-btns > a {
-          width: 100%;
+        .hero-btns > .hero-btn-primary {
+          flex: 1 1 calc(50% - 0.5rem);
+          justify-content: center;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .hero-btns > .hero-btn-secondary {
+          flex: 0 0 auto;
           justify-content: center;
         }
-        @media (min-width: 600px) {
-          .hero-btns {
-            flex-direction: row;
-            flex-wrap: wrap;
+        @media (max-width: 600px) {
+          .rating-divider { display: none !important; }
+          .rating-box {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.5rem !important;
           }
-          .hero-btns > a {
-            width: auto;
+        }
+        @media (min-width: 600px) {
+          .hero-btns > .hero-btn-primary {
+            flex: 0 0 auto;
+            padding-left: 24px !important;
+            padding-right: 24px !important;
           }
         }
         @media (min-width: 900px) {

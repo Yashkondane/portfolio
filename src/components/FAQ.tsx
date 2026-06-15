@@ -4,7 +4,7 @@ import { useState } from "react";
 const FAQS = [
   {
     q: "How much does a website cost?",
-    a: "Our pricing depends on the project scope. A simple landing page starts at ₹10,000, while a custom website ranges from ₹25,000–₹1,00,000+. Contact us on WhatsApp for a free, no-obligation quote within minutes.",
+    a: "Our pricing depends on the project scope. A simple landing page starts at ₹8,499, while a premium website starts at ₹17,999, and custom enterprise solutions range from ₹25,000+. Contact us on WhatsApp for a free, no-obligation quote within minutes.",
   },
   {
     q: "How long does it take to build a website?",
