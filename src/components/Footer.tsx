@@ -100,7 +100,7 @@ export default function Footer() {
                   style={{
                     background: "rgba(255,255,255,0.08)",
                     color: "#94A3B8",
-                    fontSize: "0.75rem",
+                    fontSize: "0.85rem",
                     padding: "3px 8px",
                     borderRadius: "4px",
                     border: "1px solid rgba(255,255,255,0.1)",

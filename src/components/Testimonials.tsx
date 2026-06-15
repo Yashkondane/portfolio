@@ -112,13 +112,13 @@ export default function Testimonials() {
               <div style={{ display: "flex", alignItems: "center", gap: "10px", borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "1rem" }}>
                 <div
                   style={{
-                    width: "36px",
-                    height: "36px",
+                    width: "38px",
+                    height: "38px",
                     borderRadius: "50%",
                     background: r.avatarColor,
                     color: "#fff",
                     fontWeight: 700,
-                    fontSize: "0.7rem",
+                    fontSize: "0.85rem",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -129,9 +129,9 @@ export default function Testimonials() {
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ color: "#fff", fontWeight: 700, fontSize: "0.875rem" }}>{r.name}</div>
-                  <div style={{ color: "#FF6A00", fontSize: "0.75rem" }}>{r.trip}</div>
+                  <div style={{ color: "#FF6A00", fontSize: "0.85rem" }}>{r.trip}</div>
                 </div>
-                <div style={{ color: "#64748B", fontSize: "0.7rem", flexShrink: 0 }}>{r.date}</div>
+                <div style={{ color: "#64748B", fontSize: "0.85rem", flexShrink: 0 }}>{r.date}</div>
               </div>
             </div>
           ))}
