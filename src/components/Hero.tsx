@@ -136,9 +136,9 @@ export default function Hero({ h1Title, h1Highlight, heroSubtitle, seoMode }: He
               maxWidth: seoMode ? "700px" : "560px",
             }}
           >
-            We build high-converting <strong style={{ color: "#fff" }}>websites</strong> and <strong style={{ color: "#fff" }}>custom software</strong><br />
-            that help businesses attract more customers, automate<br />
-            operations, and grow faster. Stop losing leads to outdated<br />
+            We build high-converting <strong style={{ color: "#fff" }}>websites</strong> and <strong style={{ color: "#fff" }}>custom software</strong>{" "}
+            that help businesses attract more customers, automate{" "}
+            operations, and grow faster. Stop losing leads to outdated{" "}
             systems and give your business the online presence it deserves.
           </p>
 

@@ -38,7 +38,8 @@ export default function Header() {
             width={300}
             height={110}
             priority
-            style={{ height: "110px", width: "auto", objectFit: "contain", mixBlendMode: "screen" }} 
+            style={{ width: "auto", objectFit: "contain", mixBlendMode: "screen" }} 
+            className="header-logo-img"
           />
         </Link>
 
@@ -153,9 +154,11 @@ export default function Header() {
       )}
 
       <style>{`
+        .header-logo-img { height: 110px; }
         @media (max-width: 768px) {
           .hidden-mobile { display: none !important; }
           .show-mobile-flex { display: flex !important; }
+          .header-logo-img { height: 60px !important; }
         }
         @media (min-width: 769px) {
           .show-mobile-flex { display: none !important; }

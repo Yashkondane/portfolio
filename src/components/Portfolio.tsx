@@ -156,6 +156,7 @@ export default function Portfolio() {
             aria-label="Previous slide"
             onClick={scrollPrev}
             disabled={isAtStart}
+            className="portfolio-nav-button"
             style={{
               position: "absolute",
               left: "1rem",
@@ -304,6 +305,7 @@ export default function Portfolio() {
             aria-label="Next slide"
             onClick={scrollNext}
             disabled={isAtEnd}
+            className="portfolio-nav-button"
             style={{
               position: "absolute",
               right: "1rem",
@@ -383,6 +385,9 @@ export default function Portfolio() {
         @media (max-width: 768px) {
           .portfolio-scroll {
             padding: 1rem calc(50% - min(160px, 42.5vw));
+          }
+          .portfolio-nav-button {
+            display: none !important;
           }
         }
         .hide-scrollbar::-webkit-scrollbar {
