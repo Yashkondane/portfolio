@@ -1,6 +1,6 @@
-# Mumbai Cabs Rental 🚕
+# Hyperlink Tech Solutions 🚀
 
-Welcome to the **Mumbai Cabs Rental** repository. This is an optimal, high-performance web application built with **Next.js** to provide users with an easy way to book affordable and reliable cab services across Mumbai, including airport transfers, local rentals, and outstation trips.
+Welcome to the **Hyperlink Tech Solutions** repository. This is an optimal, high-performance web application built with **Next.js** to showcase our web development, UI/UX design, and digital marketing services. We build fast, premium websites that generate leads and sales.
 
 ## 🚀 Tech Stack
 
@@ -46,7 +46,7 @@ You can start editing the page by modifying `src/app/page.tsx`. The page auto-up
 ## 🛠️ Project Structure
 
 - `src/app/`: Contains the Next.js App Router files, including nested routes, `layout.tsx`, `page.tsx`, and CSS globals.
-- `public/`: Static assets like images and SVG logos (e.g., `Mumbai-cabs-logo.svg` which serves as the favicon).
+- `public/`: Static assets like images and SVG logos (e.g., `favicon.ico` which serves as the favicon).
 
 ## 📄 Scripts
 
@@ -54,4 +54,3 @@ You can start editing the page by modifying `src/app/page.tsx`. The page auto-up
 - `npm run build`: Builds the application for production deployment.
 - `npm run start`: Starts the Next.js production server.
 - `npm run lint`: Runs ESLint to catch formatting and code quality issues.
-"# portfolio" 
